@@ -1,0 +1,36 @@
+{
+    "name": "Jazz Kit",
+    "instrument_count": 5,
+    "instruments": {
+        "snare": {
+            "name": "snare",
+            "file": "snare.wav",
+            "position": "",
+            "volume": 50
+        },
+        "hihat_open": {
+            "name": "hihat-open",
+            "file": "hh_open.wav",
+            "position": "",
+            "volume": 50
+        },
+        "hihat_closed": {
+            "name": "hihat-closed",
+            "file": "hh_closed.wav",
+            "position": "",
+            "volume": 50
+        },
+        "kick": {
+            "name": "jazz_kick",
+            "file": "kick.wav",
+            "position": "",
+            "volume": 50
+        },
+        "cymbal": {
+            "name": "jazz_cymbal",
+            "file": "cymbal.wav",
+            "position": "",
+            "volume": 50
+        }
+    }
+}
