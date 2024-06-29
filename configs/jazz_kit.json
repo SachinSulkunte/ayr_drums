@@ -5,31 +5,31 @@
         "snare": {
             "name": "snare",
             "file": "snare.wav",
-            "position": "",
+            "position": [0, 0],
             "volume": 50
         },
         "hihat_open": {
             "name": "hihat-open",
             "file": "hh_open.wav",
-            "position": "",
+            "position": [0, 0],
             "volume": 50
         },
         "hihat_closed": {
             "name": "hihat-closed",
             "file": "hh_closed.wav",
-            "position": "",
+            "position": [0, 0],
             "volume": 50
         },
         "kick": {
             "name": "jazz_kick",
             "file": "kick.wav",
-            "position": "",
+            "position": [0, 0],
             "volume": 50
         },
         "cymbal": {
             "name": "jazz_cymbal",
             "file": "cymbal.wav",
-            "position": "",
+            "position": [0, 0],
             "volume": 50
         }
     }
