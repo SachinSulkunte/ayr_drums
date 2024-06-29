@@ -28,7 +28,7 @@ class Kit:
             # add to list of instruments
             self.instruments.append(component)
 
-    def print_instr_list(self):
+    def print_kit_list(self):
         for instr in self.instruments:
             self.logger.info(instr.name)
 
@@ -40,7 +40,8 @@ class Kit:
                 return instr    
 
 # Example Usage:
+
 # kit = Kit(CONFIG_DIR + "jazz_kit.json")
 # kit.setup_instruments()
-# kit.print_instr_list()
+# kit.print_kit_list()
 # ins = kit.get_instrument_by_name('snare')
