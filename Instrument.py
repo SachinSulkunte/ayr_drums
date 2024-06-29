@@ -3,8 +3,12 @@ import scipy.io.wavfile as wavfile
 import numpy
 import wave
 import logging 
+import pickle
 
 import Logger
+
+# Constants
+INSTRUMENTS = "./instruments/"
 
 class Instrument:
     def __init__(self, name, file, type, position=None, default_volume=50):
@@ -38,6 +42,19 @@ class Instrument:
         self.position = (x, y)
         self.log.info(f"Changed {self.name} position from {orig} to {self.position}")
         return
+    
+    # Save instrument object for later use
+    def save_instrument(self, filepath):
+        try:
+
+            file_path = os.path.join(INSTRUMENTS, f"{self.name}.pickle")
+            with open(filepath, "wb") as f:
+                pickle.dump(self, f)
+            f.close()
+            return True
+        except Exception as e:
+            self.log.error(f"Unable to save {self.name}")
+            return False
     
     # Convert to 16-bit audio
     def to_16bit_wav(self, filepath):
