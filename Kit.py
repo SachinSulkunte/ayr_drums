@@ -12,7 +12,7 @@ class Kit:
         self.name = ""
         self.config = config_file
         self.instruments = []
-        self.logger = Logger.MyLogger(log_level=logging.DEBUG)
+        self.logger = Logger.MyLogger("Kit", log_level=logging.DEBUG)
 
     # create Instruments() from config
     def setup_instruments(self):
@@ -39,6 +39,7 @@ class Kit:
                 self.logger.info(instr)
                 return instr    
 
+# Example Usage:
 # kit = Kit(CONFIG_DIR + "jazz_kit.json")
 # kit.setup_instruments()
 # kit.print_instr_list()
