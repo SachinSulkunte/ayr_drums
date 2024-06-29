@@ -1,10 +1,11 @@
 import logging
 
 class MyLogger:
-    def __init__(self, log_level=logging.INFO, log_file=None):
+    def __init__(self, name, log_level=logging.INFO, log_file=None):
         self.logger = logging.getLogger(__name__)
+        self.logger.name = name
         self.logger.setLevel(log_level)
-        formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+        formatter = logging.Formatter('%(asctime)s - [%(name)s] %(levelname)s - %(message)s')
         
         # Configure console handler
         console_handler = logging.StreamHandler()
@@ -33,11 +34,11 @@ class MyLogger:
         self.logger.critical(message)
 
 # Example usage
-# if __name__ == "__main__":
-#     logger = MyLogger("app.log")
+if __name__ == "__main__":
+    logger = MyLogger("app.log")
     
-#     logger.debug("This is a debug message")
-#     logger.info("This is an info message")
-#     logger.warning("This is a warning message")
-#     logger.error("This is an error message")
-#     logger.critical("This is a critical message")
+    logger.debug("This is a debug message")
+    logger.info("This is an info message")
+    logger.warning("This is a warning message")
+    logger.error("This is an error message")
+    logger.critical("This is a critical message")
